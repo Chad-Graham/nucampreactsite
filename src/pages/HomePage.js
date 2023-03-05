@@ -7,7 +7,6 @@ const HomePage = () => {
         <Container>
             <SubHeader current='Home' />
             <DisplayList />
-            
         </Container>
     );
 };

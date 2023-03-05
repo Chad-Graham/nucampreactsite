@@ -1,10 +1,10 @@
+import { useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
 // import DisplayCard from './DisplayCard';
 import AnimatedDisplayCard from './AnimatedDisplayCard';
 import { selectFeaturedCampsite } from '../campsites/campsitesSlice';
 import { selectFeaturedPromotion } from '../promotions/promotionsSlice';
 import { selectFeaturedPartner } from '../partners/partnersSlice';
-import { useSelector } from 'react-redux';
 
 const DisplayList = () => {
     const items = useSelector((state) => [
@@ -13,7 +13,7 @@ const DisplayList = () => {
         selectFeaturedPartner(state)
     ]);
 
-console.log('display items:', items);
+    console.log('display items:', items);
 
     return (
         <Row>
@@ -23,8 +23,8 @@ console.log('display items:', items);
                         <Col md className='m-1' key={idx}>
                             <AnimatedDisplayCard item={item} />
                         </Col>
-                        )
-                    );
+                    )
+                );
             })}
         </Row>
     );

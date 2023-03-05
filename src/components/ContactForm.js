@@ -2,7 +2,6 @@ import { Button, Label, Col, FormGroup } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { validateContactForm } from '../utils/validateContactForm';
 
-
 const ContactForm = () => {
     const handleSubmit = (values, { resetForm }) => {
         console.log('form values:', values);
@@ -19,7 +18,7 @@ const ContactForm = () => {
                 email: '',
                 agree: false,
                 contactType: 'By Phone',
-                feedback: '',
+                feedback: ''
             }}
             onSubmit={handleSubmit}
             validate={validateContactForm}
